@@ -13,16 +13,19 @@ class TransactionsRepository {
     this.transactions = [];
   }
 
-  public all(): Transaction[] {
-    // TODO
-  }
+  // public all(): Transaction[] {
+  //   // TODO
+  // }
 
-  public getBalance(): Balance {
-    // TODO
-  }
+  // public getBalance(): Balance {
+  //   // TODO
+  // }
 
-  public create(): Transaction {
-    // TODO
+  public create(transaction: Transaction): Transaction {
+    const newTransaction = new Transaction(transaction);
+    this.transactions.push(newTransaction);
+
+    return newTransaction;
   }
 }
 
